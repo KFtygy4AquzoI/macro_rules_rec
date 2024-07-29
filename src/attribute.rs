@@ -361,6 +361,7 @@ pub fn recursive(_attr: TokenStream, input: ItemMacro) -> TokenStream {
                 $($__mrp_stack)*
             };
         }
+        pub use #internal_name;
 
         #(let attrs = &input.attrs){ #(#attrs)* }
         #{ &input.mac.path } ! #macro_name {
